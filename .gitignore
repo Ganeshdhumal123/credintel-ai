@@ -1,0 +1,68 @@
+# CredIntel AI — .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+backend/venv/
+env/
+.Python
+
+# Environment files with secrets
+.env
+*.env
+!*.env.example
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Model binaries (large files — regenerate locally)
+*.joblib
+*.pkl
+backend/app/ml/models/
+
+# FAISS index (regenerate with ingest script)
+backend/app/rag/faiss_index/
+
+# Dataset (download with script)
+data/*.csv
+data/*.data
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+desktop.ini
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/

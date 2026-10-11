@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-slate-950 dark:text-gray-100 transition-colors duration-200;
+  }
+}
+
+/* Smooth dark mode transitions */
+* {
+  border-color: var(--tw-border-color);
+}
+
+/* Ensure form select options render with dark background in dark mode */
+.dark select option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.dark select option:hover,
+.dark select option:focus,
+.dark select option:checked {
+  background-color: #1e293b;
+  color: #64ffda;
+}
